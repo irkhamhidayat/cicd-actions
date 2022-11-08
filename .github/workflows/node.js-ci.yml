@@ -22,12 +22,11 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
         push: true
         tags: irkhamdayat/cicd-nodejs:latest
-    - run: npm i
-    - run: npm run build --if-present
-    - run: npm test
+    
 
