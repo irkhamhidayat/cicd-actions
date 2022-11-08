@@ -3,8 +3,8 @@ const supertest = require('supertest')
 const request = supertest(app)
 
 
-it('Call the /simple endpoint', async done => {
-    const res = await request.get('/simple')
+it('Call the /coba endpoint', async done => {
+    const res = await request.get('/coba')
     expect(res.status).toBe(200)
     expect(res.text).toBe('Hello, Irkham belajar CI/CD!')
     done()
