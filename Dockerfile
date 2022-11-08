@@ -1,4 +1,4 @@
-FROM node:12.0.1-alpine
+FROM node:alpine
 RUN mkdir /apps
 WORKDIR /apps
 
@@ -8,11 +8,8 @@ RUN addgroup allusers && adduser -S -G allusers username
 
 COPY . /apps
 
-FROM gcr.io/distroless/nodejs:12
-COPY --from=build /apps /apps
-
 WORKDIR /apps
-RUN chown -R $USER:$USER /apps
+
 
 RUN npm install
 
