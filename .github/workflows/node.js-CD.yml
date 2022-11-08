@@ -22,5 +22,4 @@ jobs:
           port: 22
           script: |
             cd ~/apps/cicd-actions
-            git pull origin master
-                      
+                               
