@@ -1,4 +1,6 @@
 FROM node:alpine
+
+ENV USER=test
 RUN mkdir /apps
 WORKDIR /apps
 
@@ -14,5 +16,5 @@ WORKDIR /apps
 RUN npm install
 
 # mengganti user ke non-root
-USER 1000
+USER test
 CMD ["npm" "start"]
