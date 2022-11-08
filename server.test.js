@@ -6,7 +6,7 @@ const request = supertest(app)
 it('Call the /coba endpoint', async done => {
     const res = await request.get('/coba')
     expect(res.status).toBe(200)
-    expect(res.text).toBe('Hello, Irkham belajar CI/CD!')
+    expect(res.text).toBe('Irkham belajar CI/CD!')
     done()
 })
 it('Call the / endpoint', async done => {
