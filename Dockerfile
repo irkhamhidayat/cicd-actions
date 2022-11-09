@@ -13,8 +13,8 @@ COPY . /apps
 WORKDIR /apps
 
 
-RUN npm install
+RUN npm install -g npm@8.19.3
 
 # mengganti user ke non-root
-USER test
+USER test:test
 CMD ["npm" "start"]

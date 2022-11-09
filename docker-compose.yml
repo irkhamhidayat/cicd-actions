@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  # web:
+  #   build: .
+  #   user: test
+  #   ports:
+  #    - "4000:4000"
+  #   volumes:
+  #    - .:/apps
+  #    - /usr/apps/node_modules
+  nodejs:
+    image: irkhamdayat/cicd-nodejs:1.0
